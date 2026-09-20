@@ -1,0 +1,86 @@
+C++ Multiple Inheritance – Resolving Function Name Conflict
+
+Description
+
+This C++ program demonstrates multiple inheritance and how to resolve a function name conflict when two base classes have functions with the same name.
+
+Here:
+
+- "Academic" has a "display()" function.
+- "Sports" also has a "display()" function.
+- "Student" inherits from both classes.
+
+Class Structure
+
+Academic       Sports
+    \           /
+     \         /
+       Student
+
+Academic Class
+
+The "Academic" class contains a public "display()" function.
+
+void display() const {
+    std::cout << "Academic information\n";
+}
+
+It displays academic information.
+
+Sports Class
+
+The "Sports" class also contains a "display()" function.
+
+void display() const {
+    std::cout << "Sports information\n";
+}
+
+It displays sports information.
+
+Student Class
+
+The "Student" class inherits from both "Academic" and "Sports".
+
+Since both base classes have a function named "display()", calling "display()" directly from a "Student" object would create ambiguity.
+
+To solve this, the scope resolution operator "::" is used.
+
+Academic::display();
+Sports::display();
+
+This explicitly tells the compiler which base class function should be called.
+
+The "displayAll()" function calls both functions.
+
+Main Function
+
+A "Student" object is created:
+
+Student student;
+
+The following calls explicitly select the required "display()" function:
+
+student.Academic::display();
+student.Sports::display();
+
+Then:
+
+student.displayAll();
+
+calls both functions through the "Student" class.
+
+Output
+
+Academic information
+Sports information
+Academic information
+Sports information
+
+OOP Concept Used
+
+Multiple Inheritance with Function Ambiguity Resolution
+
+The scope resolution operator "::" is used to specify which base class's function should be called.
+
+Academic::display()
+Sports::display()
