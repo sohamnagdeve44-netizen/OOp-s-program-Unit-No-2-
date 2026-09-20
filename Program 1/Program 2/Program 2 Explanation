@@ -1,0 +1,49 @@
+C++ Single Inheritance – Employee and Developer
+
+Description
+
+This C++ program demonstrates single inheritance using two classes: "Employee" and "Developer".
+
+The "Developer" class inherits the "name" property from the "Employee" class and adds its own "language" property.
+
+Classes Used
+
+1. Employee Class
+
+The "Employee" class is the base class.
+
+- "name" stores the employee's name.
+- The constructor initializes the employee's name.
+- "protected" allows the derived "Developer" class to access "name".
+
+2. Developer Class
+
+The "Developer" class is the derived class of "Employee".
+
+- "language" stores the programming language.
+- The constructor initializes the name and programming language.
+- "display()" displays the developer's details.
+
+Main Function
+
+In the "main()" function, a "Developer" object is created with:
+
+- Name: "Neha"
+- Programming Language: "C++"
+
+The "display()" function is then called to show the details.
+
+Output
+
+Developer: Neha
+Language: C++
+
+OOP Concept Used
+
+Single Inheritance
+
+Employee
+    ↓
+Developer
+
+"Employee" is the base class, while "Developer" is the derived class.
