@@ -1,0 +1,48 @@
+Employee Salary Calculation using C++
+
+ *Description* 
+
+This C++ program demonstrates abstraction, inheritance, and polymorphism by calculating salaries for different types of employees.
+
+The program supports:
+
+- Permanent Employee
+- Contract Employee
+
+ *Concepts Used* 
+
+- Abstract Class
+- Pure Virtual Function
+- Inheritance
+- Polymorphism
+- Function Overriding
+- Encapsulation
+- Constructors
+
+ *Working* 
+
+- "Employee" is an abstract base class.
+- It stores the employee ID and name.
+- "calculateSalary()" is a pure virtual function.
+- "PermanentEmployee" calculates salary using basic salary + allowance.
+- "ContractEmployee" calculates salary using hourly rate × hours worked.
+- "displayPaySlip()" uses a base-class reference to display details and salary for both employee types.
+
+ *Salary Calculation* 
+
+- Permanent Employee = Basic Salary + Allowance
+- Contract Employee = Hourly Rate × Hours Worked
+
+ *Sample Output* 
+
+Employee ID: 101
+Name: Asha
+Salary: 48000
+
+Employee ID: 102
+Name: Vikas
+Salary: 40000
+
+ *Objective* 
+
+To understand how abstract classes and runtime polymorphism can be used to calculate salaries differently for different types of employees.
