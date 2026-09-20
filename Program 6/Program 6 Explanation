@@ -1,0 +1,78 @@
+C++ Multiple Inheritance – Academic, Sports and Student
+
+Description
+
+This C++ program demonstrates multiple inheritance.
+
+In multiple inheritance, a single derived class inherits from more than one base class.
+
+Here:
+
+- "Academic" is one base class.
+- "Sports" is another base class.
+- "Student" inherits from both classes.
+
+Class Hierarchy
+
+Academic       Sports
+    \           /
+     \         /
+       Student
+
+1. Academic Class
+
+The "Academic" class stores academic marks.
+
+- "academicMarks" stores academic marks.
+- The constructor initializes the marks.
+- "showAcademic()" displays the academic marks.
+
+2. Sports Class
+
+The "Sports" class stores sports marks.
+
+- "sportsMarks" stores sports marks.
+- The constructor initializes the marks.
+- "showSports()" displays the sports marks.
+
+3. Student Class
+
+The "Student" class inherits from both "Academic" and "Sports".
+
+class Student : public Academic, public Sports
+
+Its constructor calls both base class constructors.
+
+The "showTotal()" function calculates and displays the total marks:
+
+Total = Academic Marks + Sports Marks
+
+Main Function
+
+A "Student" object is created with:
+
+Student student(80, 15);
+
+Where:
+
+- Academic marks = "80"
+- Sports marks = "15"
+
+The program displays both marks and their total.
+
+Output
+
+Academic Marks: 80
+Sports Marks: 15
+Total Marks: 95
+
+OOP Concept Used
+
+Multiple Inheritance
+
+       Academic       Sports
+           \           /
+            \         /
+              Student
+
+The "Student" class inherits properties and functions from both "Academic" and "Sports".
