@@ -1,0 +1,99 @@
+C++ Constructor and Destructor in Inheritance
+
+Description
+
+This C++ program demonstrates the order of execution of constructors and destructors in inheritance.
+
+The program contains two classes:
+
+- "Base" – Parent/Base class
+- "Derived" – Child/Derived class
+
+"Derived" inherits from "Base".
+
+Class Structure
+
+Base
+  ↓
+Derived
+
+Base Class
+
+The "Base" class contains:
+
+Constructor
+
+Base() {
+    std::cout << "Base constructor\n";
+}
+
+The constructor is automatically called when a "Base" object or a derived object is created.
+
+Destructor
+
+~Base() {
+    std::cout << "Base destructor\n";
+}
+
+The destructor is automatically called when the object is destroyed.
+
+Derived Class
+
+The "Derived" class inherits from "Base".
+
+It also contains its own constructor and destructor.
+
+Constructor
+
+Derived() {
+    std::cout << "Derived constructor\n";
+}
+
+Destructor
+
+~Derived() {
+    std::cout << "Derived destructor\n";
+}
+
+Main Function
+
+Derived object;
+
+When the "Derived" object is created:
+
+1. "Base" constructor executes first.
+2. "Derived" constructor executes second.
+
+When the object goes out of scope:
+
+1. "Derived" destructor executes first.
+2. "Base" destructor executes second.
+
+Output
+
+Base constructor
+Derived constructor
+Derived destructor
+Base destructor
+
+Important Concept
+
+Constructor Order
+
+Base → Derived
+
+Destructor Order
+
+Derived → Base
+
+Creation:
+Base Constructor
+      ↓
+Derived Constructor
+
+Destruction:
+Derived Destructor
+      ↓
+Base Destructor
+
+This demonstrates the constructor and destructor execution order in inheritance.
