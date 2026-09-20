@@ -1,0 +1,41 @@
+Virtual Inheritance in C++
+
+ *Description* 
+
+This C++ program demonstrates multiple inheritance and virtual inheritance using "Person", "Student", "Employee", and "TeachingAssistant" classes.
+
+The "TeachingAssistant" class inherits from both "Student" and "Employee", while both classes virtually inherit from "Person". This ensures that only one copy of the "Person" class is created.
+
+ *Concepts Used* 
+
+- Classes and Objects
+- Inheritance
+- Multiple Inheritance
+- Virtual Inheritance
+- Constructor
+- Protected Data Members
+- "std::string"
+
+ *Class Structure* 
+
+          Person
+         /      \
+   Student    Employee
+         \      /
+     TeachingAssistant
+
+ *Working* 
+
+- "Person" stores the person's name.
+- "Student" and "Employee" virtually inherit from "Person".
+- "TeachingAssistant" inherits from both "Student" and "Employee".
+- "TeachingAssistant" directly initializes the "Person" constructor with the name ""Riya"".
+- "displayName()" displays the name.
+
+ *Sample Output* 
+
+Name: Riya
+
+ *Objective* 
+
+To understand virtual inheritance and how it solves the diamond problem in C++ multiple inheritance.
