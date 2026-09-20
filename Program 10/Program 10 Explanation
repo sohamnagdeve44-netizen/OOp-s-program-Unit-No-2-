@@ -1,0 +1,87 @@
+C++ Runtime Polymorphism – Vehicle, Car and Boat
+
+Description
+
+This C++ program demonstrates runtime polymorphism using virtual functions.
+
+The program has one base class, "Vehicle", and two derived classes:
+
+- "Car"
+- "Boat"
+
+Both derived classes provide their own implementation of the "move()" function.
+
+Class Structure
+
+          Vehicle
+          /     \
+         ↓       ↓
+       Car      Boat
+
+1. Vehicle Class
+
+The "Vehicle" class contains a virtual function:
+
+virtual void move() const
+
+The "virtual" keyword allows derived classes to provide their own version of the function.
+
+The base implementation displays:
+
+Vehicle is moving
+
+Virtual Destructor
+
+virtual ~Vehicle() = default;
+
+The virtual destructor ensures proper destruction when a derived object is handled through a base-class pointer.
+
+2. Car Class
+
+The "Car" class inherits from "Vehicle" and overrides the "move()" function:
+
+void move() const override
+
+It displays:
+
+Car moves on roads
+
+The "override" keyword indicates that this function overrides the virtual function from the base class.
+
+3. Boat Class
+
+The "Boat" class also inherits from "Vehicle" and overrides "move()".
+
+It displays:
+
+Boat moves on water
+
+Main Function
+
+Two objects are created:
+
+Car car;
+Boat boat;
+
+Then their respective "move()" functions are called:
+
+car.move();
+boat.move();
+
+Each object calls its own implementation of "move()".
+
+Output
+
+Car moves on roads
+Boat moves on water
+
+OOP Concept Used
+
+Runtime Polymorphism / Function Overriding
+
+Vehicle::move()
+      ↓
+ ┌────┴────┐
+Car::move()  Boat::move()
+
+The "virtual" and "override" keywords are used to implement polymorphic behavior.
