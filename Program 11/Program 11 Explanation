@@ -1,0 +1,32 @@
+Shape Area Calculation using C++
+
+ *Description* 
+
+This C++ program demonstrates abstraction, inheritance, and polymorphism using an abstract "Shape" class.
+
+The program calculates the area of:
+
+- Rectangle
+- Circle
+
+ *Concepts Used* 
+
+- Abstract Class
+- Pure Virtual Function
+- Inheritance
+- Function Overriding
+- Encapsulation
+- Polymorphism
+
+ *Formulas* 
+
+- Rectangle Area = Length × Width
+- Circle Area = π × Radius²
+ *Sample Output* 
+
+Rectangle Area: 15
+Circle Area: 12.5664
+
+ *Objective* 
+
+To understand how abstract classes and inheritance can be used to implement different area calculations in C++.
