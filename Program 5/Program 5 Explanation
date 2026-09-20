@@ -1,0 +1,82 @@
+C++ Hierarchical Inheritance – Vehicle, Car and Bike
+
+Description
+
+This C++ program demonstrates hierarchical inheritance.
+
+In hierarchical inheritance, multiple derived classes inherit from the same base class.
+
+Here:
+
+- "Vehicle" is the base class.
+- "Car" and "Bike" are derived classes.
+
+Class Hierarchy
+
+          Vehicle
+          /     \
+         ↓       ↓
+       Car      Bike
+
+1. Vehicle Class
+
+The "Vehicle" class is the base class.
+
+- "registrationNumber" stores the vehicle registration number.
+- The constructor initializes the registration number.
+- "start()" displays a message when the vehicle starts.
+- "registrationNumber" is "protected", so it can be accessed by derived classes.
+
+2. Car Class
+
+The "Car" class inherits from "Vehicle".
+
+class Car : public Vehicle
+
+It contains:
+
+- A constructor that calls the "Vehicle" constructor.
+- "openBoot()" displays a message that the car boot is opened.
+
+3. Bike Class
+
+The "Bike" class also inherits from "Vehicle".
+
+class Bike : public Vehicle
+
+It contains:
+
+- A constructor that calls the "Vehicle" constructor.
+- "helmetReminder()" displays a reminder to wear a helmet.
+
+Main Function
+
+Two objects are created:
+
+Car car("MH12AB1234");
+Bike bike("MH12CD5678");
+
+The program then:
+
+1. Starts the car.
+2. Opens the car boot.
+3. Starts the bike.
+4. Displays the helmet reminder.
+
+Output
+
+Vehicle MH12AB1234 started
+Car boot opened
+Vehicle MH12CD5678 started
+Please wear a helmet
+
+OOP Concept Used
+
+Hierarchical Inheritance
+
+              Vehicle
+             /       \
+            /         \
+          Car         Bike
+
+Both "Car" and "Bike" inherit common functionality from the "Vehicle" class while having their own specific functions.
