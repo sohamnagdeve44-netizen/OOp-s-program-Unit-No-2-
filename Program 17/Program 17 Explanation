@@ -1,0 +1,164 @@
+Employee Payroll Management System using C++
+
+ Employee Payroll Management System using C++
+
+ *Description* 
+
+This C++ program demonstrates Abstraction, Inheritance, and Polymorphism by calculating salaries for different types of employees.
+
+The program supports:
+
+- Full-Time Employee
+- Part-Time Employee
+- Intern
+
+ *Concepts Used* 
+
+- Abstract Class
+- Pure Virtual Function
+- Inheritance
+- Polymorphism
+- Function Overriding
+- Encapsulation
+- Constructors
+- Virtual Destructor
+
+ *Working* 
+
+- ""Employee"" is an abstract base class.
+- It stores the employee ID, name, and department.
+- ""calculateSalary()"" is declared as a pure virtual function.
+- ""FullTimeEmployee"" calculates salary using the monthly salary.
+- ""PartTimeEmployee"" calculates salary using Hourly Rate × Hours Worked.
+- ""Intern"" receives a fixed stipend.
+- Each derived class overrides ""calculateSalary()"" according to its own salary calculation method.
+- The ""display()"" function displays employee details along with the calculated salary.
+ *Salary Calculation* 
+
+Full-Time Employee
+
+Salary = Monthly Salary
+
+Part-Time Employee
+
+Salary = Hourly Rate × Hours Worked
+
+Intern
+
+Salary = Fixed Stipend
+
+ *Class Structure* 
+
+                    Employee
+                  (Abstract Class)
+                        |
+          -------------------------------
+          |              |              |
+  FullTimeEmployee  PartTimeEmployee   Intern
+
+ *Sample Output* 
+
+===== Employee Payroll =====
+
+ID: 101 | Name: Amit | Department: IT | Type: Full-Time | Salary: Rs. 65000
+ID: 102 | Name: Sneha | Department: HR | Type: Part-Time | Salary: Rs. 30000
+ID: 103 | Name: Rahul | Department: Marketing | Type: Intern | Stipend: Rs. 15000
+
+ *OOP Concept Demonstrated* 
+* 
+The program uses runtime polymorphism through the abstract ""Employee"" class. The ""calculateSalary()"" function is overridden by all derived classes, allowing each employee type to calculate salary according to its own rules.
+
+ *Objective* 
+
+To understand how abstract classes, inheritance, and runtime polymorphism can be used to implement different salary calculation methods for different types of employees.
+
+ *Key Concepts Demonstrated* 
+
+- Abstraction – Hides the implementation details of salary calculation using an abstract base class.
+- Inheritance – "FullTimeEmployee", "PartTimeEmployee", and "Intern" inherit from "Employee".
+- Polymorphism – Different employee types implement "calculateSalary()" differently.
+- Pure Virtual Function – Defines the salary calculation interface for derived classes.
+- Function Overriding – Each derived class provides its own implementation of "calculateSalary()".
+- Encapsulation – Employee data and related functions are grouped within classes.
+- Constructors – Used to initialize employee details and salary-related information.
+- Virtual Destructor – Ensures proper destruction of derived objects through a base-class pointer.
+
+This C++ program demonstrates Abstraction, Inheritance, and Polymorphism by calculating salaries for different types of employees.
+
+The program supports:
+
+- Full-Time Employee
+- Part-Time Employee
+- Intern
+
+ *Concepts Used* 
+
+- Abstract Class
+- Pure Virtual Function
+- Inheritance
+- Polymorphism
+- Function Overriding
+- Encapsulation
+- Constructors
+- Virtual Destructor
+
+ *Working* 
+
+- ""Employee"" is an abstract base class.
+- It stores the employee ID, name, and department.
+- ""calculateSalary()"" is declared as a pure virtual function.
+- ""FullTimeEmployee"" calculates salary using the monthly salary.
+- ""PartTimeEmployee"" calculates salary using Hourly Rate × Hours Worked.
+- ""Intern"" receives a fixed stipend.
+- Each derived class overrides ""calculateSalary()"" according to its own salary calculation method.
+- The ""display()"" function displays employee details along with the calculated salary.
+
+ *Salary Calculation* 
+
+Full-Time Employee
+
+Salary = Monthly Salary
+
+Part-Time Employee
+
+Salary = Hourly Rate × Hours Worked
+
+Intern
+
+Salary = Fixed Stipend
+
+ *Class Structure* 
+
+                    Employee
+                  (Abstract Class)
+                        |
+          -------------------------------
+          |              |              |
+  FullTimeEmployee  PartTimeEmployee   Intern
+
+ *Sample Output* 
+
+===== Employee Payroll =====
+
+ID: 101 | Name: Amit | Department: IT | Type: Full-Time | Salary: Rs. 65000
+ID: 102 | Name: Sneha | Department: HR | Type: Part-Time | Salary: Rs. 30000
+ID: 103 | Name: Rahul | Department: Marketing | Type: Intern | Stipend: Rs. 15000
+
+ *OOP Concept Demonstrated* 
+
+The program uses runtime polymorphism through the abstract ""Employee"" class. The ""calculateSalary()"" function is overridden by all derived classes, allowing each employee type to calculate salary according to its own rules.
+
+ *Objective* 
+
+To understand how abstract classes, inheritance, and runtime polymorphism can be used to implement different salary calculation methods for different types of employees.
+
+ *Key Concepts Demonstrated* 
+* 
+- Abstraction – Hides the implementation details of salary calculation using an abstract base class.
+- Inheritance – "FullTimeEmployee", "PartTimeEmployee", and "Intern" inherit from "Employee".
+- Polymorphism – Different employee types implement "calculateSalary()" differently.
+- Pure Virtual Function – Defines the salary calculation interface for derived classes.
+- Function Overriding – Each derived class provides its own implementation of "calculateSalary()".
+- Encapsulation – Employee data and related functions are grouped within classes.
+- Constructors – Used to initialize employee details and salary-related information.
+- Virtual Destructor – Ensures proper destruction of derived objects through a base-class pointer.
