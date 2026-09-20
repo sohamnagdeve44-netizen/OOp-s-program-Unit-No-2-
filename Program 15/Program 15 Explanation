@@ -1,0 +1,52 @@
+Vehicle Rental System using C++
+
+ *Description* 
+
+This C++ program demonstrates a simple Vehicle Rental System using inheritance and polymorphism. It calculates rental charges for different types of vehicles such as Cars and Bikes.
+
+ *Concepts Used* 
+
+- Inheritance
+- Polymorphism
+- Function Overriding
+- Constructors
+- Encapsulation
+- Virtual Functions
+- Destructor
+
+ *Working* 
+
+- "Vehicle" is the base class containing registration number and daily rental rate.
+- "Car" inherits from "Vehicle" and stores the number of doors.
+- "Bike" inherits from "Vehicle" and stores engine capacity.
+- "calculateRent()" calculates the basic rental amount.
+- "Bike" overrides "calculateRent()" and provides a 10% discount.
+- "display()" shows the details of each vehicle.
+
+ *Rental Calculation* 
+
+- Car: Rate × Number of Days
+- Bike: Rate × Number of Days × 0.9
+
+For 3 days:
+
+- Car = ₹2000 × 3 = ₹6000
+- Bike = ₹800 × 3 × 0.9 = ₹2160
+
+ *Sample Output* 
+
+Car Details
+Registration: MH12AB1234
+Rate per day: 2000
+Doors: 5
+Rent for 3 days: 6000
+
+Bike Details
+Registration: MH12CD5678
+Rate per day: 800
+Engine Capacity: 150 cc
+Rent for 3 days: 2160
+
+ *Objective* 
+
+To understand how inheritance, virtual functions, and function overriding can be used to implement different rental calculations for different types of vehicles.
