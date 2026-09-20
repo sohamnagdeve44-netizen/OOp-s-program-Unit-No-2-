@@ -1,0 +1,29 @@
+Friend Class in C++
+
+ *Description* 
+
+This C++ program demonstrates the use of a friend class. The "Auditor" class is declared as a friend of the "Account" class, allowing it to access the private "balance" member directly.
+
+ *Concepts Used* 
+
+- Classes and Objects
+- Encapsulation
+- Private Data Members
+- Friend Class
+- Constructors
+
+ *Working* 
+
+- "Account" contains a private variable "balance".
+- "Auditor" is declared as a friend class using "friend class Auditor;".
+- Because of this, "Auditor" can access the private "balance" of "Account".
+- The "inspect()" function displays the account balance.
+- An account with an initial balance of "5000.0" is created.
+
+ *Sample Output* 
+
+Account Balance: 5000
+
+ *Objective* 
+
+To understand how a friend class can access the private members of another class while maintaining controlled access.
