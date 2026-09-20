@@ -1,0 +1,104 @@
+Vehicle Fleet Management System using C++
+
+ *Description* 
+
+This C++ program demonstrates Inheritance, Polymorphism, Encapsulation, and Smart Pointers by managing a fleet of different types of delivery vehicles.
+
+The program supports:
+
+- Truck
+- Delivery Van
+- Delivery Bike
+
+ *Concepts Used* 
+
+- Inheritance
+- Runtime Polymorphism
+- Function Overriding
+- Encapsulation
+- Constructors
+- Virtual Functions
+- Virtual Destructor
+- Smart Pointers
+- "vector"
+- "unique_ptr"
+- "make_unique"
+
+ *Working* 
+
+- ""Vehicle"" is the base class that stores common vehicle information such as vehicle ID, registration number, and fuel level.
+- The fuel level is initialized to 100% for every vehicle.
+- ""startEngine()"" starts the engine of the vehicle.
+- ""refuel()"" increases the fuel level up to a maximum of 100%.
+- ""displayInfo()"" is a virtual function that displays vehicle information.
+- ""Truck"", ""DeliveryVan"", and ""Bike"" inherit from the ""Vehicle"" class.
+- Each derived class overrides ""displayInfo()"" to display its specific information.
+- Different vehicle objects are stored in a "vector" using "unique_ptr".
+- Runtime polymorphism is used to call the appropriate ""displayInfo()"" function for each vehicle.
+
+ *Vehicle Types* 
+
+Truck
+
+Stores and displays the cargo capacity in tonnes.
+
+Delivery Van
+
+Stores and displays the number of packages loaded.
+
+Delivery Bike
+
+Displays whether a delivery box is available.
+
+ *Fuel Management* 
+
+Each vehicle starts with:
+
+Fuel Level = 100%
+
+The "refuel()" function adds fuel while ensuring that the fuel level does not exceed 100%.
+
+ *Class Structure* 
+
+                     Vehicle
+                    (Base Class)
+                         |
+          --------------------------------
+          |              |               |
+        Truck       DeliveryVan         Bike
+
+ *Sample Output* 
+
+===== Fleet Status =====
+
+Vehicle TR001 engine started.
+Truck: Vehicle ID: TR001 | Registration: MH12AB1234 | Fuel: 100%
+Cargo capacity: 10.5 tonnes
+
+Vehicle DV001 engine started.
+Delivery Van: Vehicle ID: DV001 | Registration: MH12CD5678 | Fuel: 100%
+Packages loaded: 50
+
+Vehicle BK001 engine started.
+Delivery Bike: Vehicle ID: BK001 | Registration: MH12EF9012 | Fuel: 100%
+Delivery box: Available
+
+ *OOP Concept Demonstrated* 
+
+The program demonstrates runtime polymorphism using the virtual ""displayInfo()"" function. The base-class "Vehicle" pointer can refer to different derived vehicle objects, and the appropriate overridden function is called at runtime.
+
+ *Objective* 
+
+To understand how inheritance, runtime polymorphism, encapsulation, virtual functions, and smart pointers can be used to design a flexible vehicle fleet management system.
+
+ *Key Concepts Demonstrated* 
+
+- Inheritance – "Truck", "DeliveryVan", and "Bike" inherit common features from "Vehicle".
+- Polymorphism – Each vehicle type provides its own implementation of "displayInfo()".
+- Function Overriding – Derived classes override the virtual "displayInfo()" function.
+- Encapsulation – Vehicle-specific data is maintained within the respective classes.
+- Virtual Function – Enables runtime selection of the appropriate "displayInfo()" implementation.
+- Smart Pointers – "unique_ptr" provides automatic memory management.
+- Vector – Stores multiple vehicle objects in a single fleet collection.
+- Constructors – Used to initialize vehicle and type-specific information.
+- Virtual Destructor – Ensures proper destruction of derived objects.
