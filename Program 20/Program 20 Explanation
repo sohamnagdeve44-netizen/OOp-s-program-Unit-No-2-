@@ -1,0 +1,131 @@
+Banking System using C++
+
+ *Description* 
+
+This C++ program demonstrates Abstraction, Inheritance, Polymorphism, and Encapsulation by implementing a simple banking system with different types of bank accounts.
+
+The program supports:
+
+- Savings Account
+- Current Account
+- Fixed Deposit Account
+
+ *Concepts Used* 
+
+- Abstract Class
+- Pure Virtual Function
+- Inheritance
+- Runtime Polymorphism
+- Function Overriding
+- Encapsulation
+- Constructors
+- Virtual Functions
+- Virtual Destructor
+- Smart Pointers
+- "vector"
+- "unique_ptr"
+- "make_unique"
+
+ *Working* 
+
+- ""Account"" is an abstract base class that stores common account information.
+- It stores the account number, holder name, and balance.
+- ""deposit()"" is used to add money to an account.
+- ""withdraw()"" is used to withdraw money from an account.
+- ""calculateInterest()"" is declared as a pure virtual function.
+- ""SavingsAccount"" calculates interest based on the balance and interest rate.
+- ""CurrentAccount"" calculates interest using its specified interest rate.
+- ""FixedDepositAccount"" calculates simple interest based on balance, interest rate, and duration.
+- Withdrawal from a Fixed Deposit account is restricted before maturity.
+- Different account objects are stored in a "vector" using "unique_ptr".
+- Runtime polymorphism is used to call the appropriate overridden functions.
+
+ *Interest Calculation* 
+
+Savings Account
+
+Interest = Balance × Interest Rate / 100
+
+Current Account
+
+Interest = Balance × Interest Rate / 100
+
+Fixed Deposit Account
+
+Interest = Balance × Interest Rate × Duration / 100
+
+ *Account Types* 
+
+Savings Account
+
+Provides interest based on the account balance and specified interest rate.
+
+Current Account
+
+Calculates interest using the specified interest rate and supports normal deposits and withdrawals.
+
+Fixed Deposit Account
+
+Calculates interest based on the investment duration and restricts withdrawal before FD maturity.
+
+ *Class Structure* 
+
+                     Account
+                (Abstract Class)
+                       |
+        --------------------------------
+        |              |               |
+ SavingsAccount  CurrentAccount  FixedDepositAccount
+
+ *Sample Output* 
+
+===== BANKING SYSTEM =====
+
+Deposited Rs. 5000
+Withdrawn Rs. 3000
+Deposited Rs. 10000
+Withdrawn Rs. 5000
+Deposited Rs. 20000
+Withdrawal is not allowed before FD maturity.
+
+===== ACCOUNT DETAILS =====
+
+--- Savings Account ---
+Account Number: 101
+Holder Name: Rahul
+Balance: Rs. 52000
+Interest: Rs. 2080
+
+--- Current Account ---
+Account Number: 102
+Holder Name: Priya
+Balance: Rs. 80000
+Interest: Rs. 1600
+
+--- Fixed Deposit Account ---
+Account Number: 103
+Holder Name: Amit
+Balance: Rs. 120000
+Duration: 3 years
+Interest: Rs. 25200
+
+ *OOP Concept Demonstrated* 
+
+The program uses runtime polymorphism through the abstract ""Account"" class. The ""calculateInterest()"", ""display()"", and ""withdraw()"" functions can be overridden by derived account classes, allowing each account type to implement its own behavior.
+
+ *Objective* 
+
+To understand how abstract classes, inheritance, polymorphism, function overriding, and smart pointers can be used to design a simple banking system supporting multiple types of accounts.
+
+ *Key Concepts Demonstrated* 
+
+- Abstraction – Defines common banking operations using the abstract "Account" class.
+- Inheritance – "SavingsAccount", "CurrentAccount", and "FixedDepositAccount" inherit from "Account".
+- Polymorphism – Different account types implement interest calculation and display differently.
+- Function Overriding – Derived classes override "calculateInterest()", "display()", and "withdraw()" where required.
+- Encapsulation – Account data is maintained within classes.
+- Pure Virtual Function – "calculateInterest()" defines the required interest calculation interface.
+- Smart Pointers – "unique_ptr" provides automatic memory management.
+- Vector – Stores multiple account objects in a single collection.
+- Constructors – Initialize account details and interest-related information.
+- Virtual Destructor – Ensures proper destruction of derived account objects.
