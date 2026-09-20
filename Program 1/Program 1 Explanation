@@ -1,0 +1,54 @@
+C++ Single Inheritance – Person and Student
+
+Description
+
+This C++ program demonstrates single inheritance using two classes: "Person" and "Student".
+
+The "Student" class inherits properties and functions from the "Person" class.
+
+Classes Used
+
+1. Person Class
+
+The "Person" class contains:
+
+- "name" – Stores the person's name.
+- "displayName()" – Displays the person's name.
+- A constructor to initialize the name.
+
+The "name" variable is declared as "protected", so it can be accessed by the derived "Student" class.
+
+2. Student Class
+
+The "Student" class inherits from the "Person" class using public inheritance.
+
+It contains:
+
+- "rollNumber" – Stores the student's roll number.
+- "displayStudent()" – Displays the student's name and roll number.
+
+The "Student" constructor calls the "Person" constructor to initialize the student's name.
+
+Main Function
+
+In the "main()" function:
+
+- A "Student" object named "student" is created.
+- The name ""Amit"" and roll number "101" are passed to the constructor.
+- "displayStudent()" is called to display the details.
+
+Output
+
+Name: Amit
+Roll Number: 101
+
+OOP Concept
+
+Single Inheritance
+
+Person
+   |
+   ↓
+Student
+
+Here, "Person" is the base class, and "Student" is the derived class.
