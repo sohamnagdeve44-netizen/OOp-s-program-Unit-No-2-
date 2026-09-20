@@ -1,0 +1,88 @@
+ *Payment Gateway System using C++
+
+ *Description* 
+
+This C++ program demonstrates Abstraction, Inheritance, and Polymorphism by simulating a payment gateway that supports different payment methods.
+
+The program supports:
+
+- Credit Card Payment
+- UPI Payment
+- Net Banking Payment
+
+ *Concepts Used* 
+
+- Abstract Class
+- Pure Virtual Function
+- Inheritance
+- Runtime Polymorphism
+- Function Overriding
+- Encapsulation
+- Constructors
+- Virtual Destructor
+- Smart Pointers
+- "vector"
+- "unique_ptr"
+- "make_unique"
+
+ *Working* 
+
+- ""PaymentMethod"" is an abstract base class.
+- It stores the transaction ID and payment amount.
+- ""processPayment()"" is declared as a pure virtual function.
+- ""CreditCardPayment"" processes payments using a masked card number.
+- ""UPIPayment"" processes payments using a UPI ID.
+- ""NetBankingPayment"" processes payments through a bank.
+- Different payment objects are stored in a "vector" using "unique_ptr".
+- The program uses runtime polymorphism to call the appropriate ""processPayment()"" function for each payment method.
+
+ *Payment Methods* 
+
+Credit Card Payment
+
+Processes the transaction using a masked card number.
+
+UPI Payment
+
+Processes the transaction using a UPI ID.
+
+Net Banking Payment
+
+Processes the transaction through a specified bank.
+
+ *Class Structure* 
+
+                  PaymentMethod
+                 (Abstract Class)
+                        |
+        ---------------------------------
+        |               |               |
+ CreditCardPayment  UPIPayment   NetBankingPayment
+
+ *Sample Output* 
+
+===== Payment Gateway =====
+
+Credit-card transaction TXN001 for Rs. 2500 using XXXX-XXXX-1234 completed.
+UPI transaction TXN002 for Rs. 1200 from student@upi completed.
+Net-banking transaction TXN003 for Rs. 5000 through Example Bank completed.
+
+ *OOP Concept Demonstrated* 
+
+The program uses runtime polymorphism through the abstract ""PaymentMethod"" class. The ""processPayment()"" function is overridden by each derived payment class, allowing different payment methods to process transactions according to their own implementation.
+
+ *Objective* 
+
+To understand how abstract classes, inheritance, runtime polymorphism, and smart pointers can be used to design a flexible payment gateway supporting multiple payment methods.
+
+ *Key Concepts Demonstrated* 
+* 
+- Abstraction – Defines a common payment interface using the abstract "PaymentMethod" class.
+- Inheritance – Payment classes inherit common transaction details from "PaymentMethod".
+- Polymorphism – Each payment type implements "processPayment()" differently.
+- Pure Virtual Function – Defines the required payment processing interface.
+- Function Overriding – Derived classes provide their own implementation of "processPayment()".
+- Encapsulation – Payment-specific information is kept inside the respective classes.
+- Smart Pointers – "unique_ptr" manages payment objects automatically.
+- Vector – Stores multiple payment objects in a single collection.
+- Runtime Polymorphism – The correct payment processing function is selected at runtime.
