@@ -1,0 +1,93 @@
+C++ Multilevel Inheritance – Person, Employee and Manager
+
+Description
+
+This C++ program demonstrates multilevel inheritance using three classes:
+
+- "Person" → Base class
+- "Employee" → Derived from "Person"
+- "Manager" → Derived from "Employee"
+
+The "Manager" class can access the features inherited through both "Employee" and "Person".
+
+Class Hierarchy
+
+Person
+   ↓
+Employee
+   ↓
+Manager
+
+1. Person Class
+
+The "Person" class is the base class.
+
+- "name" stores the person's name.
+- The constructor initializes the name.
+- "showPerson()" displays the person's name.
+- "name" is declared as "protected", so derived classes can access it.
+
+2. Employee Class
+
+The "Employee" class inherits from "Person".
+
+class Employee : public Person
+
+It contains:
+
+- "employeeId" – Stores the employee ID.
+- "showEmployee()" – Displays the employee ID.
+- Its constructor calls the "Person" constructor.
+
+3. Manager Class
+
+The "Manager" class inherits from "Employee".
+
+class Manager : public Employee
+
+It contains:
+
+- "teamSize" – Stores the number of team members.
+- "showManager()" – Displays the manager's complete details.
+
+Inside "showManager()":
+
+- "showPerson()" displays the name.
+- "showEmployee()" displays the employee ID.
+- "teamSize" displays the team size.
+
+Main Function
+
+The following object is created:
+
+Manager manager("Ravi", 501, 8);
+
+Where:
+
+- "Ravi" → Manager's name
+- "501" → Employee ID
+- "8" → Team size
+
+Then:
+
+manager.showManager();
+
+is used to display all details.
+
+Output
+
+Name: Ravi
+Employee ID: 501
+Team Size: 8
+
+OOP Concept Used
+
+Multilevel Inheritance
+
+Person
+  ↓
+Employee
+  ↓
+Manager
+
+Here, "Employee" inherits from "Person", and "Manager" inherits from "Employee". This forms a chain of inheritance called multilevel inheritance.
