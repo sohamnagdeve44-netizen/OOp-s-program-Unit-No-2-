@@ -1,0 +1,78 @@
+C++ Public and Private Inheritance
+
+Description
+
+This C++ program demonstrates the difference between public inheritance and private inheritance.
+
+The program uses a "Base" class and two derived classes:
+
+- "PublicDerived"
+- "PrivateDerived"
+
+Base Class
+
+The "Base" class contains a public function called "show()".
+
+void show() const {
+    std::cout << "Base public function\n";
+}
+
+This function displays a simple message.
+
+Public Inheritance
+
+class PublicDerived : public Base {
+};
+
+"PublicDerived" inherits from "Base" using public inheritance.
+
+Therefore, the public function "show()" remains public and can be accessed using an object of "PublicDerived".
+
+PublicDerived publicObject;
+publicObject.show();
+
+Output
+
+Base public function
+
+Private Inheritance
+
+class PrivateDerived : private Base {
+
+"PrivateDerived" inherits from "Base" using private inheritance.
+
+Because of private inheritance, the public members of "Base" become private members of "PrivateDerived".
+
+Therefore, "show()" cannot be directly accessed outside the class.
+
+// privateObject.show();  // Error
+
+However, "PrivateDerived" can access "show()" internally through its own public function:
+
+void callBaseShow() const {
+    show();
+}
+
+So this is valid:
+
+PrivateDerived privateObject;
+privateObject.callBaseShow();
+
+Output
+
+Base public function
+
+Complete Output
+
+Base public function
+Base public function
+
+Key Difference
+
+Inheritance| Access to "Base::show()" from outside
+Public inheritance| Allowed
+Private inheritance| Not allowed
+
+OOP Concept
+
+This program demonstrates accessibility in inheritance, specifically the difference between public inheritance and private inheritance.
